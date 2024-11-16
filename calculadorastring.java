@@ -9,6 +9,7 @@ import java.util.Scanner;
 /**
  *
  * @author mikel1
+ * @author chemi
  */
 public class calculadorastring {
 
