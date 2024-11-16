@@ -21,8 +21,18 @@ public class calculadorastring {
 
         while (seguir) {
 
-            System.out.print("Introduce el primer número: ");
-            double num1 = teclado.nextDouble();
+            System.out.print("Introduce el primer numero: ");
+            while (validacion) {
+                if (teclado.hasNextDouble()) {
+                    operando1 = teclado.nextDouble();
+                    validacion = false;
+                } else {
+                    System.out.println("\nEntrada no valida introduzca un numero.");
+                    teclado.next();
+                    System.out.print("Introduce el primer numero: ");
+                }
+            }
+            validacion = true;
 
             System.out.print("Introduce la operación (+, -, *, /, resto):, elevacion, raizcuadrada ");
             String operacion = teclado.next();
